@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+* {
+    font-family: "Oxygen", sans-serif;
+}
+
+:root {
+    --primary: #e23236;
+    --background: #f0f0f0;
+    --gray: #707070;
+}
+
+h1 {
+    font-size: 3em;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2em;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1em;
+    display: inline-block;
+}
+
+.white {
+    color: white;
+}
+.black {
+    color: black;
+}
+.gray {
+    color: var(--gray);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.topSection {
+    display: flex;
+    padding: 5em;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.section {
+    width: 100%;
+    min-height: 100%;
+}
+
+.sectionTitleBar {
+    background-color: var(--primary);
+    display: inline-block;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 5em;
+    margin-top: 5em;
+    /* width: 100%; */
+}
+
+.organizerGrid {
+    display: grid;
+    /* grid-gap: 50px; */
+    /* row-gap: 5em;
+    column-gap: 5em; */
+    padding: 5em;
+    box-sizing: border-box;
+    gap: 5em;
+    /* align-content: space-around;
+    justify-content: space-between; */
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.organizerCard {
+    background-color: var(--background);
+    /* height: 30em; */
+}
+
+.organizerNameBox {
+    background-color: var(--background);
+    height: 4em;
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.7em;
+    gap: 0.3em;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.organizerOptionsBox {
+    background-color: var(--background);
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.organizerOption {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.applyButton {
+    box-sizing: border-box;
+    border: 0.5em solid var(--primary);
+    background-color: white;
+    display: block;
+    max-width: 20em;
+
+    font-weight: bold;
+    color: var(--primary);
+    /* font-size: 3em; */
+    height: 4em;
+}
