@@ -5,9 +5,11 @@
 }
 
 :root {
-    --primary: #e23236;
+    --primary: hsl(359, 75%, 54%);
+	--primary-dark: hsl(359, 75%, 25%);
     --background: #f0f0f0;
-    --gray: #707070;
+    --gray: #8a8a8a;
+	--padding-width: clamp(5px, 5%, 5em);
 }
 
 h1 {
@@ -41,9 +43,18 @@ h3 {
 
 .topSection {
     display: flex;
-    padding: 5em;
+    padding: var(--padding-width);
     box-sizing: border-box;
+	justify-content: space-around;
     flex-direction: column;
+}
+@media (orientation: landscape) {
+	.topSection {
+		flex-direction: row;
+	}
+	.topSection > * {
+		flex-basis: 100%;
+	}
 }
 
 .section {
@@ -57,32 +68,29 @@ h3 {
     padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    padding-left: 5em;
-    margin-top: 5em;
+    padding-left: var(--padding-width);
+    margin-top: var(--padding-width);
     /* width: 100%; */
 }
 
 .organizerGrid {
-    display: grid;
-    /* grid-gap: 50px; */
-    /* row-gap: 5em;
-    column-gap: 5em; */
-    padding: 5em;
+    display: flex;
+    padding: var(--padding-width);
     box-sizing: border-box;
-    gap: 5em;
-    /* align-content: space-around;
-    justify-content: space-between; */
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: var(--padding-width);
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .organizerCard {
     background-color: var(--background);
+	width: 200px;
+	margin-bottom: var(--padding-width);
     /* height: 30em; */
 }
 
 .organizerNameBox {
     background-color: var(--background);
-    height: 4em;
     display: flex;
     padding-left: 1em;
     padding-right: 1em;
@@ -106,6 +114,26 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+	margin: var(--padding-width);
+}
+.organizerOption a {
+	background-color: var(--primary);
+	border-radius: 1.25em;
+	width: 100%;
+	height: 2.5em;
+	display: inline-flex;
+	justify-content: "center";
+	align-items: "center";
+	transition: all 1s ease-out;
+}
+.organizerOption a:hover {
+	border-radius: .5em;
+	transition: all 1s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+.organizerOption a:active  {
+	background-color: var(--primary-dark);
+	border-radius: 0;
+	transition: all 1s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 .applyButton {
@@ -113,10 +141,30 @@ h3 {
     border: 0.5em solid var(--primary);
     background-color: white;
     display: block;
+	align-self: center;
     max-width: 20em;
-
     font-weight: bold;
     color: var(--primary);
     /* font-size: 3em; */
     height: 4em;
+	width: 100%;
+	position: relative;
+}
+.applyButton::after {
+	position: absolute;
+	content: '>';
+	padding-left: 1em;
+	font-weight: bold;
+	transition: padding 1s;
+}
+.applyButton:hover::after {
+	padding-left: 2em;
+}
+.applyButton:active::after {
+	padding-left: 4em;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
