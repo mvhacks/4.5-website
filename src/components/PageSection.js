@@ -7,7 +7,7 @@ function PageSection(props) {
 				e.currentTarget.parentNode.classList.toggle('hidden')
 			}}>
                 <h1 className='white bold'>{props.title}</h1>
-				<h2 className='collapse white bold'>{">"}</h2>
+				<h2 className='collapse white bold'>{'▼'}</h2>
             </button>
 			<div class='children'>
             	{props.children}
