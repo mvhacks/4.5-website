@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
  * Profile card
  * @prop {String} name - full name
  * @prop {String} title - job title
- * @prop {String} email - mvhacks.io email address: example@mvhacks.io
+ * @prop {String} email - mvhacks.io email address: contact@mvhacks.io
  * @prop {imgSrc} imgSrc - image of person
  * @prop {String} website - personal website url
  * @prop {String} insta - instagram username
@@ -60,7 +60,7 @@ function ContactIcon(props) {
     }
     return (
         <div className='organizerOption'>
-            <a href={props.link} style={{
+            <a href={props.link} target='_blank' rel='noreferrer noopener' style={{
                         display: "inline-flex",
                         justifyContent: "center",
                         alignItems: "center",

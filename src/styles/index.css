@@ -114,7 +114,6 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-	margin: var(--padding-width);
 }
 .organizerOption a {
 	background-color: var(--primary);
@@ -124,16 +123,16 @@ h3 {
 	display: inline-flex;
 	justify-content: "center";
 	align-items: "center";
-	transition: all 1s ease-out;
+	margin: var(--padding-width);
+	transition: all .5s ease-out;
 }
 .organizerOption a:hover {
-	border-radius: .5em;
-	transition: all 1s cubic-bezier(0.39, 0.58, 0.57, 1);
+	border-radius: 0;
+	transition: all .5s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 .organizerOption a:active  {
 	background-color: var(--primary-dark);
-	border-radius: 0;
-	transition: all 1s cubic-bezier(0.39, 0.58, 0.57, 1);
+	transition: all .5s cubic-bezier(0.39, 0.58, 0.57, 1) .1s;
 }
 
 .applyButton {
@@ -149,19 +148,21 @@ h3 {
     height: 4em;
 	width: 100%;
 	position: relative;
+	cursor: pointer;
 }
 .applyButton::after {
 	position: absolute;
 	content: '>';
-	padding-left: 1em;
+	padding-left: max(5%, 1em);
 	font-weight: bold;
 	transition: padding 1s;
 }
 .applyButton:hover::after {
-	padding-left: 2em;
+	padding-left: 10%;
 }
 .applyButton:active::after {
-	padding-left: 4em;
+	padding-left: 15%;
+	transition: padding 1s .1s;
 }
 .center {
 	display: flex;

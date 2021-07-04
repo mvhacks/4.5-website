@@ -6,7 +6,7 @@ export default function organizerCards()
 	return (<PageSection title={"The Team"}>
 					
 		<div className='organizerGrid'>
-			<OrganizerCard name='Zephyr Jones' title='Tech Team Member' email={'zephyr@mvhacks.io'} website={'zephyrj.com'}></OrganizerCard>
+			<OrganizerCard name='Zephyr Jones' title='Tech Team Member' email={'zephyr@mvhacks.io'}></OrganizerCard>
 			<OrganizerCard name='Homer Simpson' title='Cartoon'></OrganizerCard>
 			<OrganizerCard name='Homer Simpson' title='Cartoon'></OrganizerCard>
 			<OrganizerCard name='Homer Simpson' title='Cartoon'></OrganizerCard>
@@ -15,7 +15,7 @@ export default function organizerCards()
 			<OrganizerCard name='Homer Simpson' title='Cartoon'></OrganizerCard>
 			<OrganizerCard name='Homer Simpson' title='Cartoon'></OrganizerCard>
 			<OrganizerCard name='Homer Simpson' title='Cartoon'></OrganizerCard>
-			<OrganizerCard name='Homer Simpson' title='Cartoon' email={'homer@mvhacks.io'} imgSrc='http://www.mandysam.com/img/random.jpg'></OrganizerCard>
+			<OrganizerCard name='Homer Simpson' title='Cartoon' email={'homer@mvhacks.io'} imgSrc='http://www.mandysam.com/img/random.jpg' ></OrganizerCard>
 		</div>
 	</PageSection>)
 }
