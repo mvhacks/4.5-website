@@ -3,10 +3,12 @@ import OrganizerCards from "../components/TheTeam/OrganizerCards";
 import PageSection from "../components/PageSection";
 
 import MVHacksLogo from "../images/MVHacksLogoMV.png";
+import Timeline from "../components/Timeline/Timeline";
 
 // markup
 const IndexPage = () => {
     return (
+		<>
         <main>
             <title>MVHacks 4.5</title>
             <div className='topSection section' style={{minHeight: '80vh'}}>
@@ -23,12 +25,31 @@ const IndexPage = () => {
 					<button className='applyButton'>Apply Now</button>
 				</div>
             </div>
-            <PageSection title={"The Team"}></PageSection>
-            <PageSection title={"The Team"}></PageSection>
+            <PageSection title={"MVHacks"}> 
+				{/*TODO: Add Pictures*/}
+			</PageSection>
+            <PageSection title={"Schedule"}>
+				<Timeline></Timeline>
+			</PageSection>
+            <PageSection title={"Sponsors"}>
+
+			</PageSection>
+            <PageSection title={"FAQS"}>
+				
+			</PageSection>
+
             <PageSection title={"The Team"}>
 				<OrganizerCards></OrganizerCards>
 			</PageSection>
         </main>
+		<footer className='center'>
+			<div className='center-col'>
+			<button className='applyButton inverse'>Apply Now</button>
+			<p className='white' style={{ paddingTop:'10px'}}>You will get in *</p>
+			</div>
+			<p className='tiny' style={{justifySelf: "flex-end"}}>* Based on space available.</p>
+		</footer>
+		</>
     );
 };
 

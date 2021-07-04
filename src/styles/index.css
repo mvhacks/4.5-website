@@ -11,6 +11,18 @@
     --gray: #8a8a8a;
 	--padding-width: clamp(5px, 5%, 5em);
 }
+body {
+	height: 100%;
+}
+html {
+	height: 100%;
+}
+#___gatsby {
+	height: 100%;
+}
+#gatsby-focus-wrapper {
+	height: 100%;
+}
 
 h1 {
     font-size: 3em;
@@ -40,6 +52,9 @@ h3 {
 .bold {
     font-weight: bold;
 }
+.tiny {
+	font-size: smaller;
+}
 
 .topSection {
     display: flex;
@@ -49,12 +64,12 @@ h3 {
     flex-direction: column;
 	align-items: center;
 }
-@media (max-aspect-ratio: 4/3) {
+@media (max-width: 1200px) {
 	.topSection {
 		justify-content: space-evenly;
 	}
 }
-@media (min-aspect-ratio: 4/3) {
+@media only screen and (min-width: 1200px) {
 	.topSection {
 		flex-direction: row;
 	}
@@ -65,7 +80,30 @@ h3 {
 
 .section {
     width: 100%;
-    min-height: 100%;
+}
+.section .collapse {
+	width: 2em;
+	height: 2em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 1em;
+	border-radius: 1em;
+	background-color: rgba(0, 0, 0, .5);
+	transform: rotate(90deg);
+	transition: all .5s;
+}
+.section.hidden .collapse {
+	transform: rotate(-90deg);
+}
+.section.hidden .sectionTitleBar {
+	box-sizing: border-box;
+	filter: brightness(.5);
+}
+.section.hidden .children {
+	margin-top: 0;
+	max-height: 0;
+	overflow: hidden;
 }
 
 .sectionTitleBar {
@@ -74,9 +112,14 @@ h3 {
     padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
+	text-align: left;
     padding-left: var(--padding-width);
+	transition: all .5s;
+	width: auto;
+	outline: none;
+	border: none;
+	cursor: pointer;
     margin-top: var(--padding-width);
-    /* width: 100%; */
 }
 
 .organizerGrid {
@@ -147,7 +190,6 @@ h3 {
     border: 0.5em solid var(--primary);
     background-color: white;
     display: block;
-	align-self: center;
     max-width: 20em;
     font-weight: bold;
     color: var(--primary);
@@ -156,6 +198,21 @@ h3 {
 	width: 100%;
 	position: relative;
 	cursor: pointer;
+}
+footer {
+	background-color: var(--primary);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 40%;
+	padding: var(--padding-width);
+	padding-bottom: 15px;
+}
+.applyButton.inverse {
+	background-color: var(--primary);
+	filter: none;
+	color: white;
+	border-color: white;
 }
 .applyButton::after {
 	position: absolute;
@@ -171,16 +228,29 @@ h3 {
 	padding-left: 15%;
 	transition: padding 1s .1s;
 }
+
 .center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+.center-col {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-items: center;
+}
 .l-header {
-	flex-basis: auto;
+	flex-basis: calc(clamp(20px, 80vw, 500px) + max(15%, 40px));
 }
 .r-header {
 	flex: 1 1 max(200px, 30%);
 	display: flex;
 	flex-direction: column;
+}
+
+p {
+	font-family: "Oxygen", sans-serif;
 }
