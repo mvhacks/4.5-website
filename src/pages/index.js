@@ -1,5 +1,5 @@
 import * as React from "react";
-import OrganizerCards from "../components/sections/OrganizerCards";
+import OrganizerCards from "../components/TheTeam/OrganizerCards";
 import PageSection from "../components/PageSection";
 
 import MVHacksLogo from "../images/MVHacksLogoMV.png";
