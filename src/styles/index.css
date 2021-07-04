@@ -80,6 +80,13 @@ h3 {
 
 .section {
     width: 100%;
+	transition: all 0s;
+	margin-top: var(--padding-width);
+}
+.section.hidden {
+	background-color: var(--primary);
+	filter: brightness(.5);
+	transition-duration: .5s;
 }
 .section .collapse {
 	width: 2em;
@@ -90,15 +97,14 @@ h3 {
 	margin-left: 1em;
 	border-radius: 1em;
 	background-color: rgba(0, 0, 0, .5);
-	transform: rotate(180deg);
+	transform: 0;
 	transition: all .5s;
 }
 .section.hidden .collapse {
-	transform: rotate(0deg);
+	transform: rotate(180deg);
 }
 .section.hidden .sectionTitleBar {
 	box-sizing: border-box;
-	filter: brightness(.5);
 }
 .section.hidden .children {
 	margin-top: 0;
@@ -119,7 +125,6 @@ h3 {
 	outline: none;
 	border: none;
 	cursor: pointer;
-    margin-top: var(--padding-width);
 }
 
 .organizerGrid {
