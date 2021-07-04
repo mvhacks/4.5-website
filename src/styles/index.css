@@ -47,8 +47,14 @@ h3 {
     box-sizing: border-box;
 	justify-content: space-around;
     flex-direction: column;
+	align-items: center;
 }
-@media (orientation: landscape) {
+@media (max-aspect-ratio: 4/3) {
+	.topSection {
+		justify-content: space-evenly;
+	}
+}
+@media (min-aspect-ratio: 4/3) {
 	.topSection {
 		flex-direction: row;
 	}
@@ -127,10 +133,11 @@ h3 {
 	transition: all .5s ease-out;
 }
 .organizerOption a:hover {
-	border-radius: 0;
+	border-radius: .5em;
 	transition: all .5s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 .organizerOption a:active  {
+	border-radius: 0;
 	background-color: var(--primary-dark);
 	transition: all .5s cubic-bezier(0.39, 0.58, 0.57, 1) .1s;
 }
@@ -168,4 +175,12 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.l-header {
+	flex-basis: auto;
+}
+.r-header {
+	flex: 1 1 max(200px, 30%);
+	display: flex;
+	flex-direction: column;
 }

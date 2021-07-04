@@ -8,23 +8,26 @@ import MVHacksLogo from "../images/MVHacksLogoMV.png";
 const IndexPage = () => {
     return (
         <main>
-            <title>Home Page</title>
+            <title>MVHacks 4.5</title>
             <div className='topSection section' style={{minHeight: '80vh'}}>
-				<div>
-					<img src={MVHacksLogo} style={{ width: "clamp(20px, 80vw, 300px)", height: "auto", display:'' }} alt='MVHacks Logo'></img>
-					<h1 style={{ fontSize: "clamp(2em, 10vmin, 6em)", display:'block' }} className='bold black'>
+				<div className='l-header'>
+					<img src={MVHacksLogo} style={{ width: "clamp(20px, 80vw, 500px)", height: "auto", display:'' }} alt='MVHacks Logo'></img>
+					<h1 style={{ fontSize: "clamp(3em, 15vmin, 8em)", display:'block' }} className='bold black'>
 						MVHacks 4.5
 					</h1>
-					<h1 style={{ fontSize: "clamp(1em, 5vmin, 3em)", margin: '10px'}} className='gray'>
-						The hackathon for everyone (especially beginners).
-					</h1>
 				</div>
-				<div className='center'><button className='applyButton'>Apply Now</button></div>
+				<div className='r-header'>
+					<h1 style={{ fontSize: "clamp(1.5em, 8vmin, 4em)", margin: '10px', marginBottom:'clamp(10px, 20vh, 100px)'}} className='gray'>
+						The hackathon for everyone.<br/> (especially beginners)
+					</h1>
+					<button className='applyButton'>Apply Now</button>
+				</div>
             </div>
-            <OrganizerCards></OrganizerCards>
             <PageSection title={"The Team"}></PageSection>
             <PageSection title={"The Team"}></PageSection>
-            <PageSection title={"The Team"}></PageSection>
+            <PageSection title={"The Team"}>
+				<OrganizerCards></OrganizerCards>
+			</PageSection>
         </main>
     );
 };

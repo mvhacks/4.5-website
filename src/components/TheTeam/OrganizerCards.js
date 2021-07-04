@@ -1,10 +1,9 @@
 import React from 'react'
 import OrganizerCard from './OrganizerCard'
-import PageSection from '../PageSection'
 import people from './People.json';
 export default function organizerCards()
 {
-	return (<PageSection title={"The Team"}>
+	return (
 					
 		<div className='organizerGrid'>
 			{people.map((person, index) => {
@@ -12,5 +11,5 @@ export default function organizerCards()
 			})}
 			<OrganizerCard name='Homer Simpson' title='Cartoon' email={'homer@mvhacks.io'} imgSrc='http://www.mandysam.com/img/random.jpg' ></OrganizerCard>
 		</div>
-	</PageSection>)
+	)
 }
