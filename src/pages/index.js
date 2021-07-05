@@ -1,6 +1,7 @@
 import * as React from "react";
 import OrganizerCards from "../components/TheTeam/OrganizerCards";
 import PageSection from "../components/PageSection";
+import PhotoGallery from "../components/PhotoGallery";
 
 import MVHacksLogo from "../images/MVHacksLogoMV.png";
 import Timeline from "../components/Timeline/Timeline";
@@ -26,7 +27,7 @@ const IndexPage = () => {
 				</div>
             </div>
             <PageSection title={"MVHacks"}> 
-				{/*TODO: Add Pictures*/}
+				<PhotoGallery />
 			</PageSection>
             <PageSection title={"Schedule"}>
 				<Timeline></Timeline>

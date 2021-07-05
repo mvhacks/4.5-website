@@ -9,7 +9,7 @@ function PageSection(props) {
                 <h1 className='white bold'>{props.title}</h1>
 				<h2 className='collapse white bold'>{'▼'}</h2>
             </button>
-			<div class='children'>
+			<div className='children'>
             	{props.children}
 			</div>
         </div>
