@@ -1,6 +1,54 @@
 [
 	{
-		"title":"Hackathon Starts",
+		"title":"Check In & Breakfast",
+		"time":"7:15 am"
+	},
+	{
+		"title":"Opening Ceremony",
 		"time":"8:00 am"
+	},
+	{
+		"title":"Begin Hacking/Team Mixer",
+		"time":"8:30 am"
+	},
+	{
+		"title":"Beginner Web Development: RPG with JS, HTML, and CSS",
+		"time":"9:30 am"
+	},
+	{
+		"title":"UCSD computer science student speaks about IBM internship",
+		"time":"11:00 am"
+	},
+	{
+		"title":"Ford Workshop on Blockchain",
+		"time":"11:30 am"
+	},
+	{
+		"title":"Cup Stacking Championchip",
+		"time":"2:00 pm"
+	},
+	{
+		"title":"Make School Workshop: Landing Your First Tech Internship",
+		"time":"3:00 pm"
+	},
+	{
+		"title":"Brawl Stars Tournament",
+		"time":"4:00 pm"
+	},
+	{
+		"title":"Lunch",
+		"time":"12:30 pm"
+	},
+	{
+		"title":"Dinner",
+		"time":"6:00 pm"
+	},
+	{
+		"title":"Finalize Projects",
+		"time":"7:00 pm"
+	},
+	{
+		"title":"End Hacking & Project Submission",
+		"time":"8:30 pm"
 	}
 ]

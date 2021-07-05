@@ -1,0 +1,30 @@
+.timeline {
+	width: 100%;
+	display: flex;
+	margin-top: var(--padding-width);
+	justify-content: center;
+}
+.timeline-center {
+	width: 10px;
+	position: relative;
+	display: flex;
+	direction: column;
+	background-color: var(--primary);
+}
+.timeline-item {
+	position: relative;
+	background-color: var(--background);
+	padding: 10px;
+	padding-top: auto;
+	padding-bottom: auto;
+}
+.timeline-item-container {
+	position: absolute;
+	height: 100px;
+	padding: 10px;
+}
+.timeline-connector {
+	background-color: var(--primary);
+	position: absolute;
+	z-index: -1;
+}
