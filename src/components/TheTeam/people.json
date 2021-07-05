@@ -7,5 +7,23 @@
         "website": "http://zephyrj.com",
         "insta": "",
         "linkedInUrl": ""
+    },
+    {
+        "name": "Amanda Zhang",
+        "title": "Event Team",
+        "email": "amanda@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1ZoKY5J7lof9NCmVjhWFiYPhYsT1pXqfn",
+        "website": "",
+        "insta": "",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Sebastian Woo",
+        "title": "Event Director",
+        "email": "sebastian@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1lBh_p_hyRbiYA0GXK88IJYRrAefJ7Bg8",
+        "website": "",
+        "insta": "",
+        "linkedInUrl": ""
     }
 ]
