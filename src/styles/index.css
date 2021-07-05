@@ -8,7 +8,8 @@
     --primary: hsl(359, 75%, 54%);
 	--primary-dark: hsl(359, 75%, 25%);
     --background: #f0f0f0;
-    --gray: #8a8a8a;
+    --gray: #6d6d6d;
+	--darkGray: #443f3f;
 	--padding-width: clamp(5px, 5%, 5em);
 }
 body {
@@ -53,6 +54,11 @@ h3 {
 .gray {
     color: var(--gray);
 }
+
+.darkGray {
+	color: var(--darkGray);
+}
+
 .highlight {
 	position: relative;
 }
@@ -63,7 +69,7 @@ h3 {
 	left: -10px;
 	right: -10px;
 	bottom: -.15em;
-	opacity: .2;
+	opacity: .3;
 	filter:url(#marker-shape);
 	background-color:var(--primary);
 
@@ -246,6 +252,7 @@ footer {
 	font-weight: bold;
 	transition: padding 1s;
 }
+
 .applyButton:hover::after {
 	padding-left: 10%;
 }
@@ -293,3 +300,16 @@ footer {
     flex-wrap: wrap;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.applyButtonForm {
+	width: 15em;
+	justify-content: center;
+}
