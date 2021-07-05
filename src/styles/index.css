@@ -28,6 +28,7 @@ html {
 p {
 	font-family: "Oxygen", sans-serif;
 }
+
 h1 {
     font-size: 3em;
     display: inline-block;
@@ -179,6 +180,7 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: .5em;
 }
 
 .organizerOption {
@@ -247,6 +249,7 @@ footer {
 .applyButton:hover::after {
 	padding-left: 10%;
 }
+
 .applyButton:active::after {
 	padding-left: 15%;
 	transition: padding 1s .1s;
@@ -274,3 +277,19 @@ footer {
 	padding-left: var(--padding-width);
 	flex-direction: column;
 }
+
+.photo {
+    width: 23%;
+	margin: .5em;
+	transition: ease-in-out .25s;
+}
+
+.photoGrid {
+    display: flex;
+    padding: var(.25em);
+    box-sizing: border-box;
+    gap: var(.25em);
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
