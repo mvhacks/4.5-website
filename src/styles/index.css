@@ -24,6 +24,10 @@ html {
 	height: 100%;
 }
 
+
+p {
+	font-family: "Oxygen", sans-serif;
+}
 h1 {
     font-size: 3em;
     display: inline-block;
@@ -48,6 +52,21 @@ h3 {
 .gray {
     color: var(--gray);
 }
+.highlight {
+	position: relative;
+}
+.highlight::after {
+	position: absolute;
+	content: '';
+	top: .15em;
+	left: -10px;
+	right: -10px;
+	bottom: -.15em;
+	opacity: .2;
+	filter:url(#marker-shape);
+	background-color:var(--primary);
+
+}
 
 .bold {
     font-weight: bold;
@@ -64,12 +83,12 @@ h3 {
     flex-direction: column;
 	align-items: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
 	.topSection {
 		justify-content: space-evenly;
 	}
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
 	.topSection {
 		flex-direction: row;
 	}
@@ -111,7 +130,6 @@ h3 {
 	max-height: 0;
 	overflow: hidden;
 }
-
 .sectionTitleBar {
     background-color: var(--primary);
     display: inline-block;
@@ -255,8 +273,4 @@ footer {
 	display: flex;
 	padding-left: var(--padding-width);
 	flex-direction: column;
-}
-
-p {
-	font-family: "Oxygen", sans-serif;
 }

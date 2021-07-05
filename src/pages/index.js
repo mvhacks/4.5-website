@@ -9,18 +9,26 @@ import Timeline from "../components/Timeline/Timeline";
 const IndexPage = () => {
     return (
 		<>
+		<svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style={{display:'none'}}>
+		<defs>
+			<filter id="marker-shape">
+			<feTurbulence type="fractalNoise" baseFrequency="0.001 0.06" numOctaves="1" result="turbulence" />
+			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+			</filter>
+		</defs>
+		</svg>
         <main>
             <title>MVHacks 4.5</title>
             <div className='topSection section' style={{minHeight: '80vh'}}>
 				<div className='l-header'>
 					<img src={MVHacksLogo} style={{ width: "clamp(20px, 80vw, 500px)", height: "auto", display:'' }} alt='MVHacks Logo'></img>
-					<h1 style={{ fontSize: "clamp(3em, 15vmin, 8em)", display:'block' }} className='bold black'>
+					<h1 style={{ fontSize: "clamp(4em, 10vw, 6em)", display:'block' }} className='bold black'>
 						MVHacks 4.5
 					</h1>
 				</div>
 				<div className='r-header'>
-					<h1 style={{ fontSize: "clamp(1.5em, 8vmin, 4em)", margin: '10px', marginBottom:'clamp(10px, 20vh, 100px)'}} className='gray'>
-						The hackathon for everyone.<br/> (especially beginners)
+					<h1 style={{ fontSize: "clamp(2em, 3vw, 10em)", margin: '10px', marginBottom:'clamp(10px, 20vh, 100px)'}} className='gray'>
+						The hackathon for <span class='highlight'>everyone.</span><br/> (especially beginners)
 					</h1>
 					<button className='applyButton'>Apply Now</button>
 				</div>
