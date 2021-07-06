@@ -313,3 +313,15 @@ a.button {
 	width: 15em;
 	justify-content: center;
 }
+
+nav {
+	padding-top: 50px;
+	font-size: 200%;
+	text-align: center;
+}
+
+nav li {
+	text-decoration: none;
+	display: inline-block;
+	padding-right: 40px;
+}

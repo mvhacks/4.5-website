@@ -25,6 +25,25 @@ const IndexPage = () => {
 		</svg> */}
         <main>
             <title>MVHacks 4.5</title>
+			<nav>
+              <ul>
+                <li>
+                  <a href="#MVHacks">Photo Gallery</a>
+                </li>
+                <li>
+                  <a href="#Schedule">Schedule</a>
+                </li>
+                <li>
+                  <a href="#Sponsors">Sponsors</a>
+                </li>
+                <li>
+                  <a href="#FAQs">FAQs</a>
+                </li>
+                <li>
+                  <a href="#The-Team">The Team</a>
+                </li>
+              </ul>
+			</nav>
 			<Favicon url={faviconImg}/>
             <div className='topSection section' style={{minHeight: '80vh'}}>
 				<div className='l-header'>
