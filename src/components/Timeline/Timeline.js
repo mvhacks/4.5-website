@@ -2,20 +2,25 @@ import React, {useRef} from "react";
 import timeline from './timeline.json'
 import './timeline.css'
 import TimelineItem from "./TimelineItem";
-function Timeline()
+function Timeline(props)
 {
 	const timelineCenter = useRef();
 	const events = []
 	timeline.forEach(event => {
-		events.push({time: Date.parse('1/1/1970 '+event.time), displayTime:event.time, title:event.title})
+		console.log(event)
+
+		const out = {...event}
+		out.displayTime = event.time;
+		out.time = Date.parse('1/1/1970 '+event.time)
+		events.push(out)
 	});
 	events.sort((a, b) =>a.time-b.time);
 	function getMinDiffBetweenEvents()
 	{
-		let minDist = Number( events[1].time - events[0].time);
-		for (var i = 2; i<events.length; i++)
+		let minDist = Number( events[2].time - events[0].time);
+		for (var i = 3; i<events.length; i++)
 		{
-			const diff = Number(events[i].time - events[i-1].time);
+			const diff = Number(events[i].time - events[i-2].time);
 			if (minDist>diff)
 			{
 				minDist = diff;
@@ -23,19 +28,29 @@ function Timeline()
 		}
 		return minDist;
 	}
-	const timeLength = events[events.length-1].time - events[0].time;
-	const itemHeight = 150;
-	const minDiff = getMinDiffBetweenEvents()*2;
-	const lineHeight = (timeLength/minDiff) * itemHeight;
+	const itemHeight = 250;
+	const minDiff = getMinDiffBetweenEvents();
+	let runningHeight = itemHeight/4;
+	let runningTime = events[0].time;
 	const timeToTop = (time) =>{
-		console.log(time-events[0].time)
-		return (time - events[0].time) * (lineHeight/timeLength);
+		runningHeight += itemHeight/2*Math.pow((time-runningTime)/minDiff, props.distort??1)
+		console.log(runningHeight)
+		runningTime = time;
+		return runningHeight;
 	}
+	events.forEach((e, i)=>{
+		let props = e;
+		props.top = timeToTop(e.time) + 'px'
+		props.left = !!(i%2)
+		e.props = props;
+	})
+	runningHeight+=itemHeight*.75;
 	return (
 		<div className='timeline'>
-			<div ref={timelineCenter} className='timeline-center' style={{height: lineHeight+itemHeight}}>
+			<div ref={timelineCenter} className='timeline-center' style={{height: runningHeight}}>
 				{events.map((e, i)=>{
-					return <TimelineItem title={e.title} displayTime={e.displayTime} top={timeToTop(e.time)-itemHeight/2+itemHeight/2} left={!!(i%2)}></TimelineItem>
+					// return <TimelineItem key={i} title={e.title} displayTime={e.displayTime} top={timeToTop(e.time)-itemHeight/2+itemHeight/2} left={!!(i%2)}></TimelineItem>
+					return <TimelineItem key={i} {...e.props}></TimelineItem>
 				})}
 			</div>
 		</div>

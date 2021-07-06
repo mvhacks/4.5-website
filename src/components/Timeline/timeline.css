@@ -4,6 +4,12 @@
 	margin-top: var(--padding-width);
 	justify-content: center;
 }
+@media only screen and (max-width: 400px) {
+	.timeline {
+		display: block;
+		margin-left: 200px;
+	}
+}
 .timeline-center {
 	width: 10px;
 	position: relative;
@@ -15,16 +21,29 @@
 	position: relative;
 	background-color: var(--background);
 	padding: 10px;
+	min-width: min-content;
+	width: 20vw;
+	font-size: clamp(.8em, 2vw, 1em);
+	max-width: max-content;
 	padding-top: auto;
 	padding-bottom: auto;
+}
+.timeline-item > * {
+	margin-top: .5em;
+}
+.timeline-item > *:first-child {
+	margin-top: 0px;
 }
 .timeline-item-container {
 	position: absolute;
 	height: 100px;
-	padding: 10px;
+	padding-top: 5px;
 }
 .timeline-connector {
 	background-color: var(--primary);
 	position: absolute;
 	z-index: -1;
+}
+h3 {
+	font-size: max(1.5em, 12px);
 }

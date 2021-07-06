@@ -15,14 +15,14 @@ const IndexPage = () => {
 
     return (
 		<>
-		{/* <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style={{display:'none'}}>
+		<svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters" style={{display:'none'}}>
 		<defs>
 			<filter id="marker-shape">
 			<feTurbulence type="fractalNoise" baseFrequency="0.001 0.06" numOctaves="1" result="turbulence" />
 			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
 			</filter>
 		</defs>
-		</svg> */}
+		</svg>
         <main>
             <title>MVHacks 4.5</title>
 			<Favicon url={faviconImg}/>
@@ -46,7 +46,7 @@ const IndexPage = () => {
 				<PhotoGallery />
 			</PageSection>
             <PageSection title={"Schedule"}>
-                <Timeline></Timeline>
+                <Timeline distort={.5}></Timeline>
             </PageSection>
             <PageSection title={"Sponsors"}>
 				<Sponsors></Sponsors>
