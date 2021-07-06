@@ -5,7 +5,8 @@
   --selected-color: #e5e5e5;
   --show: "+";
   --hide: "-";
-  --left-offset: 5%;
+  --left-offset: 15%;
+  --transition-duration: 0.2s;
 }
 
 a {
@@ -15,6 +16,15 @@ a {
 
 a:hover {
   color: var(--primary-dark)
+}
+
+.faq-table {
+  width: fit-content;
+  height: fit-content;
+}
+
+.padded-td {
+  padding-right: 20px;
 }
 
 .faq {
@@ -60,9 +70,11 @@ a:hover {
   line-height: 150%;
   overflow-wrap: normal;
   padding: 0 18px;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height var(--transition-duration) ease-out;
 }
 
 .visible {
-  display: block;
+  transition: max-height var(--transition-duration) ease-out;
 }
