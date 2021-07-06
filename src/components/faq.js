@@ -63,21 +63,21 @@ class Faq extends React.Component {
 
 function Faqs(props) {
   return (
-      <div>
+      <div className="faq-flex">
         <Faq/>
-        <br/>
+        
         <Faq/>
-        <br/>
+        
         <Faq/>
-        <br/>
+        
         <Faq/>
-        <br/>
+       
         <Faq/>
-        <br/>
+     
         <Faq/>
-        <br/>
+     
         <Faq/>
-        <br/>
+   
         <Faq/>
       </div>
   );

@@ -24,9 +24,10 @@ const IndexPage = () => {
 		</defs>
 		</svg>
         <main>
-            <title>MVHacks 4.5</title>
+		<Favicon url={faviconImg}/>
+			<title>MVHacks 4.5</title>
 			<nav>
-              <ul>
+              <ul className="nav-links">
                 <li>
                   <a href="#MVHacks">Photo Gallery</a>
                 </li>
@@ -44,7 +45,6 @@ const IndexPage = () => {
                 </li>
               </ul>
 			</nav>
-			<Favicon url={faviconImg}/>
             <div className='topSection section' style={{minHeight: '80vh'}}>
 				<div className='l-header'>
 					<img src={MVHacksLogo} style={{ width: "clamp(20px, 80vw, 500px)", height: "auto", display:''}} alt='MVHacks Logo'></img>
@@ -53,7 +53,7 @@ const IndexPage = () => {
 					</h1>
 				</div>
 				<div className='r-header'>
-					<h1 style={{ fontSize: "clamp(2em, 3vw, 10em)", margin: '10px', marginBottom:'clamp(10px, 20vh, 100px)', lineHeight: '1.5em'}} className='darkGray'>
+					<h1 style={{ fontSize: "clamp(2em, 3vw, 10em)", margin: '10px', marginBottom:'clamp(8px, 10vh, 80px)', lineHeight: '1.5em'}} className='darkGray'>
 						The hackathon for <span className='highlight black'>everyone.</span><br/> (especially beginners)
 					</h1>
 					<form className='applyButtonForm' method="get" action="https://forms.gle/Em7kp6rXnLoaD4Eo9" target="_blank">

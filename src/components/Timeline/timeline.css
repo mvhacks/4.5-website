@@ -22,7 +22,7 @@
 	background-color: var(--background);
 	padding: 10px;
 	min-width: min-content;
-	width: 20vw;
+	width: 23vw;
 	font-size: clamp(.8em, 2vw, 1em);
 	max-width: max-content;
 	padding-top: auto;
