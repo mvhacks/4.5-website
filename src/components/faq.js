@@ -67,7 +67,7 @@ class Faq extends React.Component {
 
 function Faqs(props) {
   return (
-      <table id="faq-table">
+      <table className="faq-table" id="faq-table">
         <tr>
           <td className="padded-td">
             <Faq/>

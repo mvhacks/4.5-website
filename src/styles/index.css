@@ -184,6 +184,14 @@ h3 {
     flex-direction: column;
 }
 
+.organizerNameBox h2 {
+    font-size: 1.75em;
+}
+
+.organizerNameBox h3 {
+    font-size: 1.25em;
+}
+
 .organizerOptionsBox {
     background-color: var(--background);
     height: 4em;
