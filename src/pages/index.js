@@ -4,13 +4,11 @@ import PageSection from "../components/PageSection";
 import PhotoGallery from "../components/PhotoGallery";
 import Sponsors from "../components/Sponsors";
 import Favicon from 'react-favicon';
+import Faqs from "../components/faq"
 
 import MVHacksLogo from "../images/MVHacksLogoMV.png";
 import Timeline from "../components/Timeline/Timeline";
 import faviconImg from "../images/SquareMVHacksLogo.png";
-
-
-
 
 // markup
 const IndexPage = () => {
@@ -44,17 +42,18 @@ const IndexPage = () => {
 					</form>
 				</div>
             </div>
-            <PageSection title={"MVHacks"}> 
+            <PageSection title={"MVHacks"}>
 				<PhotoGallery />
 			</PageSection>
             <PageSection title={"Schedule"}>
-				<Timeline></Timeline>
-			</PageSection>
+                <Timeline></Timeline>
+            </PageSection>
             <PageSection title={"Sponsors"}>
 				<Sponsors></Sponsors>
 			</PageSection>
-            <PageSection title={"FAQS"}>
-				
+            <PageSection title={"FAQs"}>
+              <br/>
+              <Faqs/>
 			</PageSection>
             <PageSection title={"The Team"}>
 				<OrganizerCards></OrganizerCards>
@@ -62,12 +61,12 @@ const IndexPage = () => {
         </main>
 		<footer className='center'>
 			<div className='center-col'>
-			
+
 			<form className='applyButtonForm center-col' method="get" action="https://forms.gle/Em7kp6rXnLoaD4Eo9" target="_blank">
 				<button className='applyButton inverse' type="submit">Apply Now</button>
 				<p className='white' style={{ paddingTop:'10px'}}>You will get in *</p>
 			</form>
-			
+
 			</div>
 			<p className='tiny' style={{justifySelf: "flex-end"}}>* Based on space available.</p>
 		</footer>

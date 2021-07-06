@@ -1,0 +1,68 @@
+@import "index.css";
+
+:root {
+  --default-color: #eeeeee;
+  --selected-color: #e5e5e5;
+  --show: "+";
+  --hide: "-";
+  --left-offset: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary)
+}
+
+a:hover {
+  color: var(--primary-dark)
+}
+
+.faq {
+  position: relative;
+  left: var(--left-offset);
+  width: fit-content;
+  height: fit-content;
+  font-size: 200%;
+}
+
+.bordered {
+  border: 3px solid var(--primary);
+  border-radius: 5px;
+}
+
+.faq-question {
+  width: 30vw;
+  overflow-wrap: normal;
+  padding: 18px;
+  border-radius: 5px;
+  background-color: var(--default-color);
+  color: black;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background-color: var(--selected-color);
+}
+
+.faq-question:after {
+  float: right;
+  content: var(--show);
+  color: var(--primary);
+}
+
+.selected:after {
+  content: var(--hide);
+}
+
+.faq-answer {
+  width: 30vw;
+  line-height: 150%;
+  overflow-wrap: normal;
+  padding: 0 18px;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
