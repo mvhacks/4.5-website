@@ -3,7 +3,7 @@ import * as React from 'react';
 function Sponsors(props) {
 
     return (
-        <div className='section'>
+        <div className='section sponsors'>
             <h1>TBD...</h1>
         </div>
     );

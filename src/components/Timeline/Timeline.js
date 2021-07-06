@@ -7,7 +7,7 @@ function Timeline(props)
 	const timelineCenter = useRef();
 	const events = []
 	timeline.forEach(event => {
-		console.log(event)
+		// console.log(event)
 
 		const out = {...event}
 		out.displayTime = event.time;
@@ -34,7 +34,7 @@ function Timeline(props)
 	let runningTime = events[0].time;
 	const timeToTop = (time) =>{
 		runningHeight += itemHeight/2*Math.pow((time-runningTime)/minDiff, props.distort??1)
-		console.log(runningHeight)
+		// console.log(runningHeight)
 		runningTime = time;
 		return runningHeight;
 	}

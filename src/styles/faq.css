@@ -28,11 +28,12 @@ a:hover {
 }
 
 .faq {
-  position: relative;
-  left: var(--left-offset);
   width: fit-content;
   height: fit-content;
-  font-size: 200%;
+  position: relative;
+  left: var(--left-offset);
+  margin: .1em;
+  font-size: 1.5em;
 }
 
 .bordered {
@@ -41,7 +42,7 @@ a:hover {
 }
 
 .faq-question {
-  width: 30vw;
+  width: 40vw;
   overflow-wrap: normal;
   padding: 18px;
   border-radius: 5px;
@@ -66,8 +67,8 @@ a:hover {
 }
 
 .faq-answer {
-  width: 30vw;
-  line-height: 150%;
+  width: 40vw;
+  line-height: 125%;
   overflow-wrap: normal;
   padding: 0 18px;
   overflow: hidden;

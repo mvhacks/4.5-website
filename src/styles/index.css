@@ -4,6 +4,10 @@
     font-family: "Oxygen", sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
     --primary: hsl(359, 75%, 54%);
 	--primary-dark: hsl(359, 75%, 25%);
@@ -82,28 +86,6 @@ h3 {
 	font-size: smaller;
 }
 
-.topSection {
-    display: flex;
-    padding: var(--padding-width);
-    box-sizing: border-box;
-	justify-content: space-around;
-    flex-direction: column;
-	align-items: center;
-}
-@media (max-width: 1000px) {
-	.topSection {
-		justify-content: space-evenly;
-	}
-}
-@media only screen and (min-width: 1000px) {
-	.topSection {
-		flex-direction: row;
-	}
-	.topSection > * {
-		flex-basis: 100%;
-	}
-}
-
 .section {
     width: 100%;
 	transition: all 0s;
@@ -150,6 +132,29 @@ h3 {
 	outline: none;
 	border: none;
 	cursor: pointer;
+}
+
+.topSection {
+    display: flex;
+    padding: var(--padding-width);
+    box-sizing: border-box;
+	justify-content: space-around;
+    flex-direction: column;
+	align-items: center;
+	margin-top: 2em;
+}
+@media (max-width: 1000px) {
+	.topSection {
+		justify-content: space-evenly;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.topSection {
+		flex-direction: row;
+	}
+	.topSection > * {
+		flex-basis: 100%;
+	}
 }
 
 .organizerGrid {
@@ -277,12 +282,14 @@ footer {
 }
 .l-header {
 	flex-basis: calc(clamp(20px, 80vw, 500px) + max(15%, 40px));
+	padding-left: 5vw;
 }
 .r-header {
 	flex: 1 1 max(200px, 30%);
 	display: flex;
 	padding-left: var(--padding-width);
 	flex-direction: column;
+	padding-top: 3vh;
 }
 
 .photo {
@@ -316,7 +323,7 @@ a.button {
 
 nav {
 	padding-top: 50px;
-	font-size: 200%;
+	font-size: 1.5em;
 	text-align: center;
 }
 
@@ -324,4 +331,34 @@ nav li {
 	text-decoration: none;
 	display: inline-block;
 	padding-right: 40px;
+}
+
+.nav-links a {
+	color: var(--primary);
+}
+
+.nav-links a:hover {
+    color: var(--primary-dark);
+	transition: ease-in-out 250ms;
+}
+
+.nav-links a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: var(--primary);
+    width: 0%;
+    z-index: 1;
+    transition: ease-in-out 250ms;
+	transform: translateY(1.25em);
+}
+
+.nav-links a:hover::before{
+    width: 100%;
+	background-color: var(--primary-dark);
+    transition: ease-in-out 250ms;
+}
+
+.sponsors {
+	margin-left: 6vw;
 }
