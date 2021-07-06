@@ -358,3 +358,7 @@ nav li {
 	background-color: var(--primary-dark);
     transition: ease-in-out 250ms;
 }
+
+.sponsors {
+	margin-left: 6vw;
+}
