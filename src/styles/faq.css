@@ -1,8 +1,9 @@
 @import "index.css";
 
 :root {
-  --default-color: #eeeeee;
-  --selected-color: #e5e5e5;
+  --default-color: hsl(0, 0%, 90%);
+  --selected-color: hsl(0, 0%, 80%);
+  --disabled-color: hsl(0, 0%, 70%);
   --show: "+";
   --hide: "-";
   --left-offset: 15%;
@@ -18,39 +19,36 @@ a:hover {
   color: var(--primary-dark)
 }
 
-.faq-table {
-  width: fit-content;
-  height: fit-content;
-  margin-top: 2em;
+.faqs {
+  box-sizing: border-box;
+  padding: var(--padding-width);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-.padded-td {
-  padding-right: 20px;
-}
-
 .faq {
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-  left: var(--left-offset);
-  margin: .1em;
+  flex: 1 1 max(350px, 40%);
+  transition: all var(--transition-duration) ease-out;
+  margin: 10px var(--padding-width);
+  outline: 0px solid var(--default-color);
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
-.bordered {
-  border: 3px solid var(--primary);
-  border-radius: 5px;
+.faq.visible {
+  outline: 3px solid var(--primary);
+  background-color: var(--default-color);
 }
 
 .faq-question {
-  width: 40vw;
   overflow-wrap: normal;
   padding: 18px;
-  border-radius: 5px;
   background-color: var(--default-color);
   color: black;
   text-align: left;
   cursor: pointer;
   font-size: 1.5em;
+  transition: all var(--transition-duration) ease-out;
 }
 
 .faq-question:hover {
@@ -63,21 +61,19 @@ a:hover {
   color: var(--primary);
 }
 
-.selected:after {
+.faq.visible .faq-question:after {
   content: var(--hide);
 }
 
 .faq-answer {
-  width: 40vw;
   line-height: 125%;
-  overflow-wrap: normal;
   padding: 0 18px;
-  overflow: hidden;
   max-height: 0;
-  transition: max-height var(--transition-duration) ease-out;
+  overflow: hidden;
+  transition: all var(--transition-duration) ease-out;
   font-size: 1.25em;
 }
 
-.visible {
-  transition: max-height var(--transition-duration) ease-out;
+.faq.visible .faq-answer {
+  transition: all var(--transition-duration) ease-out;
 }

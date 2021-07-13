@@ -114,6 +114,9 @@ h3 {
 .section.hidden .sectionTitleBar {
 	box-sizing: border-box;
 }
+.children {
+
+}
 .section.hidden .children {
 	margin-top: 0;
 	max-height: 0;
@@ -330,9 +333,16 @@ a.button {
 }
 
 nav {
-	padding-top: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-size: 1.5em;
 	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	/* make this look like glass with a blur filter*/
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, .8);
 }
 
 nav li {
@@ -368,5 +378,6 @@ nav li {
 }
 
 .sponsors {
-	margin-left: 6vw;
+	padding-left: 6vw;
+	box-sizing: border-box;
 }

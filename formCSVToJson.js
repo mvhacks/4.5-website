@@ -1,3 +1,4 @@
+// make sure to ctrl+f for "open?" and replace with "uc?" inside the output csv
 const parse = require('csv-parse')
 const fs = require('fs');
 var parser = parse({columns: true}, function (err, records) {

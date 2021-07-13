@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import "../styles/faq.css";
 
 const QUESTIONS = [
@@ -25,37 +25,47 @@ const ANSWERS = [
   `Contact us through our Facebook, Twitter, or email:
        <a href="mailto:contact@mv-hacks.com">contact@mv-hacks.com</a>.<br/>`
 ];
-
-let index = 0;
+// combining the above two into a single list of QA objects -
+// I recommend that we eventually rewrite the above two lists into one list of objects
+const QAs = QUESTIONS.map((question, index) => {
+  return {
+    question: question,
+    answer: ANSWERS[index]
+  };
+});
 
 class Faq extends React.Component {
 
   constructor(props) {
     super(props);
-
-    index %= QUESTIONS.length;
-    this.question = QUESTIONS[index];
-    this.answer = ANSWERS[index];
-    index++;
-
+    this.parentFaq = React.createRef()
     this.answerRef = React.createRef();
-
-    this.visible = false;
+    this.question = props.question;
+    this.answer = props.answer;
+    window.addEventListener("resize", e=>{
+      // check if parentFaq is visible
+      if (this.parentFaq.current.classList.contains("visible")) {
+        // if visible, set the max height of the answer to it's current value
+        this.answerRef.current.style.maxHeight = this.answerRef.current.scrollHeight + "px";
+      }
+    })
   }
-
   render() {
     return (
-        <div className={"faq" + (this.visible ? " bordered" : "")}>
-          <div className={"faq-question" + (this.visible ? " selected" : "")}
+        <div ref={this.parentFaq} className={"faq"}>
+          <div className={"faq-question"}
                onClick={() => {
-                 this.visible = !this.visible;
-                 this.answerRef.current.style.maxHeight =
-                     (this.visible ? this.answerRef.current.scrollHeight + "px" : "0px");
-                 this.forceUpdate();
+                 // set the max height of the answer to it's current value
+                if (this.parentFaq.current.classList.toggle("visible")) {
+                  this.answerRef.current.style.maxHeight = this.answerRef.current.scrollHeight + "px";
+                }
+                else {
+                  this.answerRef.current.style.maxHeight = "0px";
+                }
                }}>
             {this.question}
           </div>
-          <div className={"faq-answer" + (this.visible ? " visible" : "")}
+          <div className={"faq-answer"}
                dangerouslySetInnerHTML={{__html: `<p><br/>${this.answer}<br/>&nbsp;</p>`}}
                ref={this.answerRef}>
           </div>
@@ -66,50 +76,15 @@ class Faq extends React.Component {
 }
 
 function Faqs(props) {
+  // return a map of the QAs to the FAQ component
   return (
-      <table className="faq-table" id="faq-table">
-        <tr>
-          <td className="padded-td">
-            <Faq/>
-            <br/>
-          </td>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-          <td>
-            <Faq/>
-            <br/>
-          </td>
-        </tr>
-      </table>
-  );
+    <div className="faqs">
+      {QAs.map((qa, index) => {
+        return <Faq key={index} question={qa.question} answer={qa.answer}/>
+      })
+      }
+    </div>
+  )
 }
 
 export default Faqs;

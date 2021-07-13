@@ -71,7 +71,6 @@ const IndexPage = () => {
 				<Sponsors></Sponsors>
 			</PageSection>
             <PageSection title={"FAQs"}>
-              <br/>
               <Faqs/>
 			</PageSection>
             <PageSection title={"The Team"}>
