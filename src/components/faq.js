@@ -42,7 +42,7 @@ class Faq extends React.Component {
     this.answerRef = React.createRef();
     this.question = props.question;
     this.answer = props.answer;
-    window.addEventListener("resize", e=>{
+    window.addEventListener("resize", ()=>{
       // check if parentFaq is visible
       if (this.parentFaq.current.classList.contains("visible")) {
         // if visible, set the max height of the answer to its current value
