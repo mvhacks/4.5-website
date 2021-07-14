@@ -42,6 +42,9 @@ a:hover {
 
 .faq-question {
   overflow-wrap: normal;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
   padding: 18px;
   background-color: var(--default-color);
   color: black;

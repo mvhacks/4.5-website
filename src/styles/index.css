@@ -9,6 +9,7 @@ html {
 }
 
 :root {
+	--primary-light: hsl(359, 75%, 70%);
     --primary: hsl(359, 75%, 54%);
 	--primary-dark: hsl(359, 75%, 25%);
     --background: #f0f0f0;
@@ -88,13 +89,14 @@ h3 {
 
 .section {
     width: 100%;
-	transition: all 0s;
 	margin-top: var(--padding-width);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	transition: all .5s;
 }
 .section.hidden {
 	background-color: var(--primary);
 	filter: brightness(.5);
-	transition-duration: .5s;
 }
 .section .collapse {
 	width: 2em;
@@ -115,11 +117,13 @@ h3 {
 	box-sizing: border-box;
 }
 .children {
-
+	transition: all .5s;
 }
 .section.hidden .children {
 	margin-top: 0;
-	max-height: 0;
+	overflow: hidden;
+}
+.section .children {
 	overflow: hidden;
 }
 .sectionTitleBar {
@@ -340,27 +344,23 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 1;
+	display: flex;
+	justify-content: center;
 	/* make this look like glass with a blur filter*/
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(10px);
 	background-color: rgba(255, 255, 255, .8);
 }
 
-nav li {
-	text-decoration: none;
-	display: inline-block;
-	padding-right: 40px;
-}
-
-.nav-links a {
+nav a {
 	color: var(--primary);
 }
 
-.nav-links a:hover {
+nav a:hover {
     color: var(--primary-dark);
 	transition: ease-in-out 250ms;
 }
 
-.nav-links a::before {
+nav a::before {
     content: '';
     display: block;
     height: 3px;
@@ -371,7 +371,7 @@ nav li {
 	transform: translateY(1.25em);
 }
 
-.nav-links a:hover::before{
+nav a:hover::before{
     width: 100%;
 	background-color: var(--primary-dark);
     transition: ease-in-out 250ms;

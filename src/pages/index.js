@@ -4,15 +4,19 @@ import PageSection from "../components/PageSection";
 import PhotoGallery from "../components/PhotoGallery";
 import Sponsors from "../components/Sponsors";
 import Favicon from 'react-favicon';
-import Faqs from "../components/faq"
-
+import Faqs from "../components/faq";
+import '../styles/navbar.css';
+import navbar from './navbar.js';
 import MVHacksLogo from "../images/MVHacksLogoMV.png";
 import Timeline from "../components/Timeline/Timeline";
 import faviconImg from "../images/SquareMVHacksLogo.png";
 
 // markup
 const IndexPage = () => {
-
+	// run navbar() after this element is rendered
+	React.useEffect(() => {
+		navbar();
+	}, []);
     return (
 		<>
 		<svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters" style={{display:'none'}}>
@@ -27,23 +31,12 @@ const IndexPage = () => {
 		<Favicon url={faviconImg}/>
 			<title>MVHacks 4.5</title>
 			<nav>
-              <ul className="nav-links">
-                <li>
-                  <a href="#MVHacks">Photo Gallery</a>
-                </li>
-                <li>
-                  <a href="#Schedule">Schedule</a>
-                </li>
-                <li>
-                  <a href="#Sponsors">Sponsors</a>
-                </li>
-                <li>
-                  <a href="#FAQs">FAQs</a>
-                </li>
-                <li>
-                  <a href="#The-Team">The Team</a>
-                </li>
-              </ul>
+				<button id="pancake">|||</button>
+				<a href="#MVHacks">Photo Gallery</a>
+				<a href="#Schedule">Schedule</a>
+				<a href="#Sponsors">Sponsors</a>
+				<a href="#FAQs">FAQs</a>
+				<a href="#The-Team">The Team</a>
 			</nav>
             <div className='topSection section' style={{minHeight: '80vh'}}>
 				<div className='l-header'>

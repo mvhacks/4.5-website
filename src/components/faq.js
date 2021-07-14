@@ -45,7 +45,7 @@ class Faq extends React.Component {
     window.addEventListener("resize", e=>{
       // check if parentFaq is visible
       if (this.parentFaq.current.classList.contains("visible")) {
-        // if visible, set the max height of the answer to it's current value
+        // if visible, set the max height of the answer to its current value
         this.answerRef.current.style.maxHeight = this.answerRef.current.scrollHeight + "px";
       }
     })
@@ -53,9 +53,9 @@ class Faq extends React.Component {
   render() {
     return (
         <div ref={this.parentFaq} className={"faq"}>
-          <div className={"faq-question"}
+          <button className={"faq-question"}
                onClick={() => {
-                 // set the max height of the answer to it's current value
+                 // set the max height of the answer to its current value
                 if (this.parentFaq.current.classList.toggle("visible")) {
                   this.answerRef.current.style.maxHeight = this.answerRef.current.scrollHeight + "px";
                 }
@@ -64,7 +64,7 @@ class Faq extends React.Component {
                 }
                }}>
             {this.question}
-          </div>
+          </button>
           <div className={"faq-answer"}
                dangerouslySetInnerHTML={{__html: `<p><br/>${this.answer}<br/>&nbsp;</p>`}}
                ref={this.answerRef}>

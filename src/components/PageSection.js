@@ -2,18 +2,43 @@ import React, {useRef} from "react";
 
 function PageSection(props) {
     const collapsing = useRef();
-    // on window resize set the max height of the element
-    window.addEventListener('resize', () => {
-        if (collapsing.current) {
+    const parent = useRef();
+
+    // change the height of the page section when class or style changes
+    React.useEffect(() => {
+
+        const mutationObserver = new MutationObserver(function(mutationsList) {
+            // guess the height change due to the class change and then set the height after the transition completes
+            if (collapsing.current.style.maxHeight !== '0px') {
+                collapsing.current.style.maxHeight = collapsing.current.style.maxHeight + mutationsList[0].target.scrollHeight*3 + 'px'; // im being kinda lazy here - I should store all stored changes in scrollheights and use that for the maxHeight and then set the max height on transition end
+                mutationsList[0].target.addEventListener('transitionend', function() {
+                    mutationsList[0].target.style.maxHeight = collapsing.current.scrollHeight;
+                })
+            }
+        })
+        if (!parent.current.classList.contains('hidden')) {
             collapsing.current.style.maxHeight = collapsing.current.scrollHeight + 'px';
         }
-    });
+        mutationObserver.observe(collapsing.current, {
+            attributes: true,
+            attributeFilter: ['class', 'className'],
+            subtree: true,
+            childList: true
+        });
 
-    React.useEffect(() => {
-        collapsing.current.style.maxHeight = collapsing.current.scrollHeight + "px";
-    }, []);
+        // on window resize set the max height of the element
+        window.addEventListener('resize', () => {
+            if (!parent.current.classList.contains('hidden')) {
+                collapsing.current.style.maxHeight = collapsing.current.scrollHeight + 'px';
+            }
+        });
+        return () => {
+            mutationObserver.disconnect();
+        }
+    }, [parent.current]);
+
     return (
-        <div className='section' id={props.title.replace(' ', '-')}>
+        <div ref={parent} className='section' id={props.title.replace(' ', '-')}>
             <button className='sectionTitleBar' onClick={(e)=>{
 				if (e.currentTarget.parentNode.classList.toggle('hidden')) {
                     collapsing.current.style.maxHeight = "0px";
