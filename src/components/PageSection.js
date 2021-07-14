@@ -10,7 +10,7 @@ function PageSection(props) {
         const mutationObserver = new MutationObserver(function(mutationsList) {
             // guess the height change due to the class change and then set the height after the transition completes
             if (collapsing.current.style.maxHeight !== '0px') {
-                collapsing.current.style.maxHeight = collapsing.current.style.maxHeight + mutationsList[0].target.scrollHeight*3 + 'px'; // im being kinda lazy here - I should store all stored changes in scrollheights and use that for the maxHeight and then set the max height on transition end
+                collapsing.current.style.maxHeight = parseFloat(collapsing.current.style.maxHeight) + mutationsList[0].target.scrollHeight*3 + 'px'; // im being kinda lazy here - I should store all stored changes in scrollheights and use that for the maxHeight and then set the max height on transition end
                 mutationsList[0].target.addEventListener('transitionend', function() {
                     mutationsList[0].target.style.maxHeight = collapsing.current.scrollHeight;
                 })
