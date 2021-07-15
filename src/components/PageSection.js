@@ -35,7 +35,7 @@ function PageSection(props) {
         return () => {
             mutationObserver.disconnect();
         }
-    }, [parent.current]);
+    }, []);
 
     return (
         <div ref={parent} className='section' id={props.title.replace(' ', '-')}>

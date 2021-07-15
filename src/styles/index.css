@@ -377,6 +377,7 @@ nav a:hover::before {
 }
 
 .sponsors {
-    padding-left: 6vw;
+    padding-left: var(--padding-width);
+	padding-right: var(--padding-width);
     box-sizing: border-box;
 }
