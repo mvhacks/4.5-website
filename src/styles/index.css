@@ -266,11 +266,12 @@ footer {
 }
 .applyButton::after {
     position: absolute;
-    content: "👉";
+    font-family: "icomoon";
+    content: "\1f4dd";
     padding-left: max(5%, 1em);
     font-weight: bold;
     transition: padding 1s;
-    transform: scale(2) translateY(-0.3em);
+    transform: scale(1.25) translateY(.1em);
 }
 
 .applyButton:hover::after {
@@ -394,3 +395,46 @@ nav a:hover::before {
 	padding-right: var(--padding-width);
     box-sizing: border-box;
 }
+
+/* icomoon fonts */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?acbfqq');
+    src:  url('fonts/icomoon.eot?acbfqq#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?acbfqq') format('truetype'),
+      url('fonts/icomoon.woff?acbfqq') format('woff'),
+      url('fonts/icomoon.svg?acbfqq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-apply:before {
+    content: "\1f4dd";
+}
+  
