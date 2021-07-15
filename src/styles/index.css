@@ -87,9 +87,8 @@ h3 {
 
 .section {
     width: 100%;
-    margin-top: var(--padding-width);
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 2em;
+    margin-bottom: 2em;
     transition: all 0.5s;
 }
 .section.hidden {
@@ -116,9 +115,9 @@ h3 {
 }
 .children {
     transition: all 0.5s;
+    margin-bottom: 2em;
 }
 .section.hidden .children {
-    margin-top: 0;
     overflow: hidden;
 }
 .section .children {
@@ -137,7 +136,6 @@ h3 {
     outline: none;
     border: none;
     cursor: pointer;
-    margin-top: 3em;
 }
 
 .topSection {
