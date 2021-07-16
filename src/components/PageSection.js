@@ -32,6 +32,13 @@ function PageSection(props) {
                 collapsing.current.style.maxHeight = collapsing.current.scrollHeight + 'px';
             }
         });
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', () => {
+                if (!parent.current.classList.contains('hidden')) {
+                    collapsing.current.style.maxHeight = collapsing.current.scrollHeight + 'px';
+                }
+            });
+        });
         return () => {
             mutationObserver.disconnect();
         }

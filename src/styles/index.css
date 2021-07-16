@@ -147,7 +147,7 @@ h3 {
     align-items: center;
     margin-top: 2em;
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .topSection {
         justify-content: space-evenly;
     }
@@ -312,9 +312,9 @@ footer {
     transition: ease-in-out 0.25s;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .photo {
-        width: 30%;
+        flex: 1 1 400px;
         margin: 0.5em;
         transition: ease-in-out 0.25s;
     }
