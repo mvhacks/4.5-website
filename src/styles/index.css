@@ -174,7 +174,9 @@ h3 {
     background-color: var(--background);
     width: 200px;
     margin-bottom: var(--padding-width);
-    /* height: 30em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .organizerNameBox {
@@ -307,14 +309,16 @@ footer {
 }
 
 .photo {
-    width: 23%;
+    flex: 0 1 500px;
+    width: 500px;
     margin: 0.5em;
     transition: ease-in-out 0.25s;
 }
 
 @media only screen and (max-width: 900px) {
     .photo {
-        flex: 1 1 400px;
+        flex: 1 1 300px;
+        width: 300px;
         margin: 0.5em;
         transition: ease-in-out 0.25s;
     }
@@ -322,10 +326,10 @@ footer {
 
 .photoGrid {
     display: flex;
-    padding: var(0.25em);
+    padding: var(--padding-width);
     box-sizing: border-box;
-    gap: var(0.25em);
-    justify-content: space-around;
+    gap: var(--padding-width);
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 

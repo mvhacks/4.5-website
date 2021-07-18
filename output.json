@@ -1,5 +1,50 @@
 [
     {
+        "name": "Sonav Agarwal",
+        "title": "Lead Director",
+        "email": "sonav@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1y0ZixypSpbFvqL8-77-n66YVm7JJITfo",
+        "website": "https://sonavagarwal.com",
+        "insta": "virtuosonav",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Olivia Lai",
+        "title": "Tech Director",
+        "email": "olivia@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1NHflgFKVhuOmzaCaIxc-6QckRzDeePzD",
+        "website": "http://oliviaslai.com",
+        "insta": "",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Sebastian Woo",
+        "title": "Event Director",
+        "email": "sebastian@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1lBh_p_hyRbiYA0GXK88IJYRrAefJ7Bg8",
+        "website": "",
+        "insta": "",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Vinay Siva",
+        "title": "Outreach Director",
+        "email": "vinay@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1EW58z43mjyA6mRjc7is3p1fjwHbKR2In",
+        "website": "",
+        "insta": "",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Milind Upadhyay",
+        "title": "Tech Team",
+        "email": "milind@mvhacks.io",
+        "imgSrc": "https://drive.google.com/uc?id=1AxP6xYw_pcpJndcR7uC-lxAIbwNt11CY",
+        "website": "https://tree.ghar.family",
+        "insta": "",
+        "linkedInUrl": ""
+    },
+    {
         "name": "Zephyr Jones",
         "title": "Tech Team",
         "email": "zephyr@mvhacks.io",
@@ -18,30 +63,30 @@
         "linkedInUrl": ""
     },
     {
-        "name": "Sebastian Woo",
-        "title": "Event Director",
-        "email": "sebastian@mvhacks.io",
-        "imgSrc": "https://drive.google.com/uc?id=1lBh_p_hyRbiYA0GXK88IJYRrAefJ7Bg8",
+        "name": "Saarang Bondalapati",
+        "title": "Event Team",
+        "email": "",
+        "imgSrc": "https://drive.google.com/uc?id=1YF4XBDeUI1K1l6dNMSYCDLnmCYdi27Vj",
         "website": "",
-        "insta": "",
+        "insta": "saarang.bond",
         "linkedInUrl": ""
     },
     {
-        "name": "Milind Upadhyay",
-        "title": "Tech team",
-        "email": "milind@mvhacks.io",
-        "imgSrc": "https://drive.google.com/uc?id=1AxP6xYw_pcpJndcR7uC-lxAIbwNt11CY",
-        "website": "https://tree.ghar.family",
-        "insta": "",
+        "name": "Ashwin Talwalkar",
+        "title": "Event Team",
+        "email": "ashwint@mvhacks.io",
+        "imgSrc": "",
+        "website": "https://ashwin-t.github.io/Old-Website/",
+        "insta": "_Ashwin.t",
         "linkedInUrl": ""
     },
     {
-        "name": "Olivia Lai",
-        "title": "Tech Director",
-        "email": "olivia@mvhacks.io",
-        "imgSrc": "https://drive.google.com/?id=1NHflgFKVhuOmzaCaIxc-6QckRzDeePzD",
-        "website": "http://oliviaslai.com",
-        "insta": "",
+        "name": "Astra Tulac",
+        "title": "Event Team",
+        "email": "astratulac@gmaill.com",
+        "imgSrc": "https://drive.google.com/uc?id=1UpQhT9CJHvK76A1zxjMvb6ZwbAhSYZzT",
+        "website": "",
+        "insta": "astratulac",
         "linkedInUrl": ""
     },
     {
@@ -54,10 +99,19 @@
         "linkedInUrl": ""
     },
     {
-        "name": "Vinay Siva",
-        "title": "Sponsorship Director",
-        "email": "vinay@mvhacks.io",
-        "imgSrc": "https://drive.google.com/uc?id=1EW58z43mjyA6mRjc7is3p1fjwHbKR2In",
+        "name": "Jayant Patil",
+        "title": "Outreach Team",
+        "email": "jay@mvhacks.io",
+        "imgSrc": "",
+        "website": "https://jayp570.github.io/",
+        "insta": "",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Armaan Hedayati",
+        "title": "Outreach Team",
+        "email": "",
+        "imgSrc": "",
         "website": "",
         "insta": "",
         "linkedInUrl": ""

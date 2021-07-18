@@ -8,7 +8,7 @@ function PhotoGallery(props) {
         <div className='section'>
             <div className='photoGrid'>
 			{photos.map((photo, index) => {
-				return <img key={index} name={photo.name} src={photo.filepath} className="photo"></img>
+				return <img key={index} name={photo.name} alt={photo.name} src={photo.filepath} className="photo"></img>
 			})}
 		    </div>
         </div>

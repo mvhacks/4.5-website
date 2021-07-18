@@ -1,27 +1,35 @@
 [
     {
-        "filepath": "https://i.imgur.com/hzkHCt9.jpg"
+        "filepath": "https://i.imgur.com/hzkHCt9.jpg",
+        "name":"Setting up"
     },
     {
-        "filepath": "https://i.imgur.com/PEKs8zJ.jpg"
+        "filepath": "https://i.imgur.com/PEKs8zJ.jpg",
+        "name":"A team collaborating"
     },
     {
-        "filepath": "https://i.imgur.com/9HFLMdE.jpg"
+        "filepath": "https://i.imgur.com/9HFLMdE.jpg",
+        "name":"A team working on a project together"
     },
     {
-        "filepath": "https://i.imgur.com/1tseqwt.jpg"
+        "filepath": "https://i.imgur.com/1tseqwt.jpg",
+        "name":"Cup stacking competition"
     },
     {
-        "filepath": "https://i.imgur.com/cdRdJuG.jpg"
+        "filepath": "https://i.imgur.com/cdRdJuG.jpg",
+        "name":"Some baked goods on a table"
     },
     {
-        "filepath": "https://i.imgur.com/qitJsnB.jpg"
+        "filepath": "https://i.imgur.com/qitJsnB.jpg",
+        "name":"Another team collaborating"
     },
     {
-        "filepath": "https://i.imgur.com/0jyQ6Kk.jpg"
+        "filepath": "https://i.imgur.com/0jyQ6Kk.jpg",
+        "name":"A round of the brawlstars tournament"
     },
     {
-        "filepath": "https://i.imgur.com/LWlvKHA.jpg"
+        "filepath": "https://i.imgur.com/LWlvKHA.jpg",
+        "name":"The entire event room with teams spread across the tables"
     }
 ]
 
