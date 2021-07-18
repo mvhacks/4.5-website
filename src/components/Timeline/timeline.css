@@ -20,7 +20,7 @@
 .timeline-item {
 	position: relative;
 	background-color: var(--background);
-	padding: 10px;
+	padding: 10px 10px;
 	min-width: min-content;
 	width: 23vw;
 	font-size: clamp(.8em, 2vw, 1em);
