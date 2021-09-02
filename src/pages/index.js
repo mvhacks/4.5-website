@@ -141,7 +141,7 @@ const IndexPage = () => {
                             The hackathon for <span className='highlight black'>everyone.</span>
                             <br /> (especially beginners)
                         </h1>
-                        <form className='applyButtonForm' method='get' action='https://forms.gle/Em7kp6rXnLoaD4Eo9' target='_blank'>
+                        <form className='applyButtonForm' method='get' action='https://forms.gle/mkq56cms6G2MEW1DA' target='_blank'>
                             <button className='applyButton' type='submit'>
                                 Apply Now
                             </button>
@@ -167,7 +167,7 @@ const IndexPage = () => {
             </main>
             <footer className='center'>
                 <div className='center-col'>
-                    <form className='applyButtonForm center-col' method='get' action='https://forms.gle/Em7kp6rXnLoaD4Eo9' target='_blank'>
+                    <form className='applyButtonForm center-col' method='get' action='https://forms.gle/mkq56cms6G2MEW1DA' target='_blank'>
                         <button className='applyButton inverse' type='submit'>
                             Apply Now
                         </button>
