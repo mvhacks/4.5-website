@@ -9,6 +9,7 @@ import "../styles/navbar.css";
 import MVHacksLogo from "../images/MVHacksLogoMV.png";
 import Timeline from "../components/Timeline/Timeline";
 import faviconImg from "../images/SquareMVHacksLogo.png";
+import instaLogo from "../images/instalogo.png";
 
 
 function navbar() {
@@ -175,8 +176,10 @@ const IndexPage = () => {
                         <p className='white' style={{ paddingTop: "10px" }}>
                             You will get in *
                         </p>
+                        <br></br>
+                        <a target='_blank' href='https://www.instagram.com/mvhacks/'><img style={{ width: '30px' }} src={instaLogo}></img></a>
                     </form>
-                </div>
+                </div>                
                 <p className='tiny' style={{ justifySelf: "flex-end" }}>
                     * Based on space available.
                 </p>
