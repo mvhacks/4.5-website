@@ -140,6 +140,7 @@ const IndexPage = () => {
                             className='darkGray'>
                             The hackathon for <span className='highlight black'>everyone.</span>
                             <br /> (especially beginners)
+                            <br /><br /><span style={{fontSize: ".7em", fontWeight:"700"}}>Join us October 23 from 8am to 8pm</span>
                         </h1>
                         <form className='applyButtonForm' method='get' action='https://forms.gle/mkq56cms6G2MEW1DA' target='_blank'>
                             <button className='applyButton' type='submit'>
