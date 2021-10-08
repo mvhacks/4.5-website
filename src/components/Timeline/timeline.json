@@ -1,61 +1,50 @@
 [
 	{
-		"title":"Check In & Breakfast",
-		"time":"7:15 am"
+		"title":"Check In",
+		"time":"7:45 am"
 	},
 	{
 		"title":"Opening Ceremony",
 		"time":"8:00 am"
 	},
 	{
-		"title":"Begin Hacking",
+		"title":"Icebreakers; Team Formation + Start Hacking",
 		"time":"8:30 am"
 	},
 	{
-		"title":"Team Mixer",
-		"time":"8:30 am"
-	},
-	{
-		"title":"Beginner Web Development",
-		"desc":"RPG with JS, HTML, and CSS",
-		"time":"9:30 am"
-	},
-	{
-		"title":"About IBM Internship",
-		"desc":"UCSD CS student speaker",
+		"title":"Intro to Web Development",
+		"desc": "Workshop #1",
 		"time":"11:00 am"
 	},
 	{
-		"title":"Ford Workshop on Blockchain",
-		"time":"11:30 am"
-	},
-	{
-		"title":"Cup Stacking Championship",
-		"time":"2:00 pm"
-	},
-	{
-		"title":"Make School Workshop",
-		"desc": "Landing Your First Tech Internship",
-		"time":"3:00 pm"
-	},
-	{
-		"title":"Brawl Stars Tournament",
-		"time":"4:00 pm"
-	},
-	{
-		"title":"Lunch",
+		"title":"Meal + Ecercise Break",
 		"time":"12:30 pm"
 	},
 	{
-		"title":"Dinner",
+		"title":"Working at Google with Java",
+		"desc": "Workshop #2 with Dr. Penix",
+		"time":"2:30 pm"
+	},
+	{
+		"title":"Skribl Tournament",
+		"time":"3:30 pm"
+	},
+	{
+		"title":"CTF",
+		"time":"4:30 pm"
+	},
+	{
+		"title":"Mr. Rennie's career as a Software Developer and his Favorite Tech Stack",
+		"desc":"Mr. Rennie talks about his the different aspects of his past and current career at google",
 		"time":"6:00 pm"
 	},
 	{
-		"title":"Finalize Projects",
-		"time":"7:00 pm"
+		"title":"Project Submissions",
+		"time":"7:55 pm"
 	},
 	{
-		"title":"End Hacking & Project Submission",
+		"title":"Closing Ceremony & Awards",
+		"desc":"8:30 to 9:00 pm",
 		"time":"8:30 pm"
 	}
 ]
