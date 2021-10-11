@@ -17,25 +17,25 @@
 		"time":"11:00 am"
 	},
 	{
-		"title":"Meal + Ecercise Break",
+		"title":"Meal + Exercise Break",
 		"time":"12:30 pm"
 	},
 	{
 		"title":"Working at Google with Java",
-		"desc": "Workshop #2 with Dr. Penix",
+		"desc": "Workshop #2 with Dr. John Penix",
 		"time":"2:30 pm"
 	},
 	{
-		"title":"Skribl Tournament",
+		"title":"Skribbl Tournament",
 		"time":"3:30 pm"
 	},
 	{
-		"title":"CTF",
+		"title":"CTF Event",
 		"time":"4:30 pm"
 	},
 	{
-		"title":"Mr. Rennie's career as a Software Developer and his Favorite Tech Stack",
-		"desc":"Mr. Rennie talks about his the different aspects of his past and current career at google",
+		"title":"Google Software Developer and his Favorite Tech Stack",
+		"desc":"Workshop #3: Developer Jeffrey Rennie discusses his Google career",
 		"time":"6:00 pm"
 	},
 	{
