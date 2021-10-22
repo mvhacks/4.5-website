@@ -22,7 +22,7 @@ function Timeline(props) {
         }
         return minDist;
     }
-    const itemHeight = 250;
+    const itemHeight = 400;
     const minDiff = getMinDiffBetweenEvents();
     let runningHeight = itemHeight / 4;
     let runningTime = events[0].time;

@@ -21,6 +21,11 @@
 		"time":"12:30 pm"
 	},
 	{
+		"title":"Google Software Developer and his Favorite Tech Stack",
+		"desc":"Workshop #3 with developer Jeffrey Rennie discussing his CS career",
+		"time":"1:30 pm"
+	},
+	{
 		"title":"Working at Google with Java",
 		"desc": "Workshop #2 with Dr. John Penix",
 		"time":"2:30 pm"
@@ -32,11 +37,6 @@
 	{
 		"title":"CTF Event",
 		"time":"4:30 pm"
-	},
-	{
-		"title":"Google Software Developer and his Favorite Tech Stack",
-		"desc":"Workshop #3 with developer Jeffrey Rennie discussing his CS career",
-		"time":"6:00 pm"
 	},
 	{
 		"title":"Project Submissions",
