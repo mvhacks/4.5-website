@@ -440,3 +440,9 @@ nav a:hover::before {
     content: "\1f4dd";
 }
   
+.sponsor-img {
+    height: 100px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
