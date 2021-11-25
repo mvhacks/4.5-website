@@ -267,7 +267,8 @@ footer {
 .applyButton::after {
     position: absolute;
     font-family: "icomoon";
-    content: "\1f4dd";
+    /* content: "\1f4dd"; */
+    /* pencil icon */ 
     padding-left: max(5%, 1em);
     font-weight: bold;
     transition: padding 1s;

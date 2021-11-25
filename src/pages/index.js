@@ -141,11 +141,11 @@ const IndexPage = () => {
                             className='darkGray'>
                             The hackathon for <span className='highlight black'>everyone.</span>
                             <br /> (especially beginners)
-                            <br /><br /><span style={{fontSize: ".7em", fontWeight:"700"}}>Join us October 23 from 8am to 8pm</span>
+                            <br /><br /><span style={{fontSize: ".7em", fontWeight:"700"}}>Stay tuned for MVHacks 5.0!</span>
                         </h1>
-                        <form className='applyButtonForm' method='get' action='https://forms.gle/mkq56cms6G2MEW1DA' target='_blank'>
+                        <form className='applyButtonForm' method='get' action='https://mvhacks-4-5.devpost.com/?ref_feature=challenge&ref_medium=discover' target='_blank'>
                             <button className='applyButton' type='submit'>
-                                Apply Now
+                                Check out our 4.5 winners!
                             </button>
                         </form>
                     </div>
@@ -169,20 +169,20 @@ const IndexPage = () => {
             </main>
             <footer className='center'>
                 <div className='center-col'>
-                    <form className='applyButtonForm center-col' method='get' action='https://forms.gle/mkq56cms6G2MEW1DA' target='_blank'>
+                    <form className='applyButtonForm center-col' method='get' action='https://mvhacks-4-5.devpost.com/?ref_feature=challenge&ref_medium=discover' target='_blank'>
                         <button className='applyButton inverse' type='submit'>
-                            Apply Now
+                            Check out our 4.5 winners!
                         </button>
-                        <p className='white' style={{ paddingTop: "10px" }}>
+                        {/* <p className='white' style={{ paddingTop: "10px" }}>
                             You will get in *
-                        </p>
+                        </p> */}
                         <br></br>
                         <a target='_blank' href='https://www.instagram.com/mvhacks/'><img style={{ width: '30px' }} src={instaLogo}></img></a>
                     </form>
                 </div>                
-                <p className='tiny' style={{ justifySelf: "flex-end" }}>
+                {/* <p className='tiny' style={{ justifySelf: "flex-end" }}>
                     * Based on space available.
-                </p>
+                </p> */}
             </footer>
         </>
     );
